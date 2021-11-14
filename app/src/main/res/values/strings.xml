@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LoginApp</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="type_your_username">Type your username</string>
+    <string name="passaword">Passaword</string>
+    <string name="type_your_passaword">Type your passaword</string>
+    <string name="forgot_passaword">Forgot Passaword?</string>
+    <string name="login_text">LOGIN</string>
+    <string name="or_sign_up_using">or Sign Up Using</string>
+    <string name="your_name">ID:</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="signout">SIGNOUT</string>
+</resources>
