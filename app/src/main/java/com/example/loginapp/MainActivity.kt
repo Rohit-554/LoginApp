@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
+        //GoogleApiClient
+         mGoogleApiClient = GoogleApiClient.Builder(this)
+            .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
+            .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+            .build()
         //firebase auth instance
         mAuth = FirebaseAuth.getInstance()
         sign_in_button.setOnClickListener{
@@ -38,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun signIn() {
+        Auth.GoogleSignInApi.signOut(mGoogleApiClient)
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
